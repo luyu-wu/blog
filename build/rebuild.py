@@ -32,7 +32,7 @@ def handle(page):
         return
 
     try:
-        if not "hidden" in draft_f[0]:
+        if "hidden" not in draft_f[0]:
             if not os.path.exists("../content/"):
                 os.mkdir("../content/")
             if not os.path.exists("../content/main/"):

@@ -1,5 +1,4 @@
 from source.files import *
-import os
 
 starship_version = 1.3
 
