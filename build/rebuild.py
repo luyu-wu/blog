@@ -12,6 +12,7 @@ if os.path.dirname(os.path.realpath(__file__)) != os.getcwd():
     print("Please run `rebuild.py` from build dir!")
     exit()
 
+
 # I recognize that this is indeed mostly identical to
 # the handle() method of publish and it might be good to
 # unify the two; I will consider this later.
@@ -50,7 +51,7 @@ def handle(page):
                     writeto(f"../content/{tag}/state", "0")
                     writeto(f"../content/{tag}/chunk", "0")
                 chunk(draft_f[1], f"../content/{tag}/", gentag(tag))
-        
+
         standalone = collect(draft_f[2], "../content/main/index.html", "../style.css")
         writeto(f"../pages/{draft_f[3]}.html", standalone)
 
@@ -59,17 +60,25 @@ def handle(page):
         print(e)
         return
 
+
 defer = "-y" in sys.argv
 
+
 def conf(p):
-    if defer: return
+    if defer:
+        return
     while True:
         i = input(f"{p} (y/N): ")
-        if len(i) == 0: return 1
-        if i in "yY": return 0
-        if i in "nN": return 1
+        if len(i) == 0:
+            return 1
+        if i in "yY":
+            return 0
+        if i in "nN":
+            return 1
 
-if conf("Are your artifacts synced?"): exit()
+
+if conf("Are your artifacts synced?"):
+    exit()
 
 # remove all dynamic content
 if os.path.isdir("../pages/"):
