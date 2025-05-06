@@ -54,6 +54,7 @@ div#title-inner {
     text-align: center;
     padding: 3px;
     border-bottom: 2px solid var(--link-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* title is a hyperlink but inherits style of h2 */
@@ -102,6 +103,7 @@ div.post {
     background-color: var(--foreground-color);
     padding: 3px;
     border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 div.content {
