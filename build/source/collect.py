@@ -22,9 +22,6 @@ def collect(body, index, styleroot):
             elif "title" in line:
                 final += f"<title>{page_title}</title>\n"
 
-            elif "grabber" in line:
-                final += f'<div id="starship">Powered by Starship v{starship_version}<div id="grabber">🔥</div></div>\n'
-
             elif "name" in line:
                 final += f'<a href="{index}">{page_title}</a>\n'
 
