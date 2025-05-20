@@ -1,7 +1,5 @@
 from source.files import *
 
-starship_version = 1.3
-
 
 def collect(body, index, styleroot):
     final = ""
